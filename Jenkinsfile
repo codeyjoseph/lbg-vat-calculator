@@ -6,6 +6,16 @@ pipeline {
 				git branch: 'main', url: 'https://github.com/codeyjoseph/lbg-vat-calculator.git'
 			}
 		}
+		stage('Install') {
+			steps {
+				sh "npm install"
+			{
+		}
+		stage('Test') {
+			steps {
+				sh "nmp test"
+			}
+		}
 		stage('SonarQube Analysis') {
 			environment {
 				scannerHome = tool 'sonarqube'
