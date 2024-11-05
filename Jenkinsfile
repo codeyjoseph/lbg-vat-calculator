@@ -13,7 +13,7 @@ pipeline {
 		}
 		stage('Test') {
 			steps {
-				sh "nmp test"
+				sh "npm test"
 			}
 		}
 		stage('SonarQube Analysis') {
